@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  get "users/new"
+
   get "pages/home"
 
   get "pages/contact"
@@ -12,6 +14,7 @@ SampleApp::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
+	match '/signup', :to => 'users#new'
 	match '/contact', :to => 'pages#contact'
 	match '/about', :to => 'pages#about'
 	match '/help', :to => 'pages#help'
